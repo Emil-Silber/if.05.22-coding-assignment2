@@ -47,8 +47,8 @@ grandparent(GP, GC) :- parent(GP, P), parent(P, GC).
 
 % Task 4
 
-% grandfather(GrandParent) :- grandparent(GrandParent, GrantChild), male(GrandParent)
+% grandfather(GrandParent, GrandChild) :- grandparent(GrandParent, GrandChild), male(GrandParent)
 grandfather(GP, GC) :- grandparent(GP, GC), male(GP).
 
-% grandmother(GrandParent) :- grandparent(GrandParent, GrantChild), female(GrandParent)
+% grandmother(GrandParent, GrandChild) :- grandparent(GrandParent, GrandChild), female(GrandParent)
 grandMother(GP, GC) :- grandparent(GP, GC), female(GP).
